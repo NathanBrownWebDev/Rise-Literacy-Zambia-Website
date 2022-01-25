@@ -17,33 +17,33 @@
 
 <body>
     <header class="header">
-        <a class="header-logo-link"href="index.html">
-            <img class="header-logo-link__image" src="../images/rise-zambia-logo-mobile-two.jpeg"
-                 alt="Rise Literacy Zambia Logo Home Screen Link">
-        </a>
-        
-        <button class="header-donate-button desktop-button">Donate</button>
-        
-        <input class="nav-checkbox" type="checkbox" name="" id="nav-cbox">
-        <nav class="nav">    
-            <ul class="nav__list">
-                <li class="nav__list__item">
-                    <div class="paypal-button">
-                        <form action="https://www.paypal.com/donate" method="post" target="_top">
-                            <input type="hidden" name="hosted_button_id" value="4Q84ZGWVBMVDN" />                    
-                            <input class="donate-button nav-donate-button" value="DONATE" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
-                            <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
-                            <!-- <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> -->
-                        </form>
-                    </div>
-                </li>                
-                <li class="nav__list__item"><a class="nav__list__item__link" href="#commitment">Our Commitment</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="#values">Our Values</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="#donate-contact">Connect With Us</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
-        <label class="nav-icon" for="nav-cbox"><span class="nav-icon__hambuger"></span></label>
+        <div class="header__flex-wrapper">
+            <a class="header-logo-link"href="index.html">
+                <img class="header-logo-link__image" src="../images/rise-zambia-logo-mobile-two.jpeg"
+                     alt="Rise Literacy Zambia Logo Home Screen Link">
+            </a>
+            
+            <input class="nav-checkbox" type="checkbox" name="" id="nav-cbox">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list__item nav-donate-button-item">
+                        <div class="paypal-button">
+                            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                <input type="hidden" name="hosted_button_id" value="4Q84ZGWVBMVDN" />
+                                <input class="donate-button nav-donate-button" value="DONATE" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+                                <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
+                                <!-- <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> -->
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="#commitment">Our Commitment</a></li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="#values">Our Values</a></li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="#donate-contact">Connect With Us</a></li>
+                    <li class="nav__list__item nav__about"><a class="nav__list__item__link" href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+            <label class="nav-icon" for="nav-cbox"><span class="nav-icon__hambuger"></span></label>
+        </div>
     </header>
 
     <main>
@@ -72,17 +72,18 @@
 
 
         <section class="section commitment-section" id="commitment">
-            <h2 class="section__title">Built On Four Pillars</h2>
+            <h2 class="section__title commitment-title">Built On Four Pillars</h2>
 
             <div class="commitment-section_grid-wrapper">
-                <div class="commitment-section__content-containers">
+                <div class="commitment-section__content-containers reach-grid-area">
                     <img src="../images/people-icon.png" alt="" class="commitment-containers__icons people-icon">
                     <h3 class="commitment-containers__headers">Reaching</h3>
                     <p class="commitment-containers__text">
                         underserved areas of Zambia with access to literacy resources.
                     </p>
                 </div>
-                <div class="commitment-section__content-containers">
+                <div class="commitment-divider-one"></div>
+                <div class="commitment-section__content-containers inspire-grid-area">
                     <img src="../images/lightbulb-icon.png" alt="" class="commitment-containers__icons">
                     <h3 class="commitment-containers__headers">Inspiring</h3>
                     <p class="commitment-containers__text">
@@ -90,7 +91,8 @@
                         and mentors with access for all learners.
                     </p>
                 </div>
-                <div class="commitment-section__content-containers">
+                <div class="commitment-divider-two"></div>
+                <div class="commitment-section__content-containers support-grid-area">
                     <img src="../images/hand-book-icon.png" alt="" class="commitment-containers__icons">
                     <h3 class="commitment-containers__headers">Supporting</h3>
                     <p class="commitment-containers__text">
@@ -98,7 +100,8 @@
                         building pathways to increased literacy.
                     </p>
                 </div>
-                <div class="commitment-section__content-containers">
+                <div class="commitment-divider-three"></div>
+                <div class="commitment-section__content-containers equip-grid-area">
                     <img src="../images/teaching-icon.png" alt="" class="commitment-containers__icons">
                     <h3 class="commitment-containers__headers">Equipping</h3>
                     <p class="commitment-containers__text">
@@ -159,7 +162,7 @@
             <div class="reach-out-container">
                 <div class="reach-out-container__content">
                     <h3 class="donate-contact-section__headers">Reach Out</h3>
-                    <p class="donate-contact-section__paragraphs">
+                    <p class="donate-contact-section__paragraphs reach-out-paragraph">
                         If you are interested in email updates, future development trips,
                         hosting a book drive, or have any questions, let us know!
                     </p>
