@@ -9,31 +9,39 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header class="header">
-        <a class="header-logo-link"href="index.html">
-            <img class="header-logo-link__image" src="../images/rise-zambia-logo-mobile-two.jpeg"
-                 alt="Rise Literacy Zambia Logo Home Screen Link">
-        </a>
-        
-        <button class="header-donate-button desktop-button">Donate</button>
-        
-        <input class="nav-checkbox" type="checkbox" name="" id="nav-cbox">
-        <nav class="nav">    
-            <ul class="nav__list">
-                <li class="nav__list__item"><a class="nav__list__item__link nav__list__item__button" href="#">Donate</a></li>                
-                <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#mission">Our Misson</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#commitment">Our Commitment</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#values">Our Values</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#donate-contact">Connect With Us</a></li>
-                <li class="nav__list__item"><a class="nav__list__item__link" href="#">About Us</a></li>
-            </ul>
-        </nav>
-        <label class="nav-icon" for="nav-cbox"><span class="nav-icon__hambuger"></span></label>
-    </header>    
+        <div class="header__flex-wrapper">
+            <a class="header-logo-link"href="index.html">
+                <img class="header-logo-link__image" src="../images/rise-zambia-logo-mobile-two.jpeg"
+                     alt="Rise Literacy Zambia Logo Home Screen Link">
+            </a>
+            
+            <input class="nav-checkbox" type="checkbox" name="" id="nav-cbox">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list__item header-donate-button-item">
+                        <div class="paypal-button">
+                            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                <input type="hidden" name="hosted_button_id" value="4Q84ZGWVBMVDN" />
+                                <input class="header-donate-button" value="DONATE" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+                                <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /> -->
+                                <!-- <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> -->
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#commitment">Our Commitment</a></li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#values">Our Values</a></li>
+                    <li class="nav__list__item"><a class="nav__list__item__link" href="index.html#donate-contact">Connect With Us</a></li>
+                    <li class="nav__list__item nav__about"><a class="nav__list__item__link" href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+            <label class="nav-icon" for="nav-cbox"><span class="nav-icon__hambuger"></span></label>
+        </div>
+    </header> 
 
     <main class="about-us-main-container">
         <section class="about-us__section-containers">
@@ -144,7 +152,7 @@
 
                 <div class="about-us__bio-containers">
                     <div class="bio-photo-containers">
-                        <img src="" alt="" class="bio-photos">
+                        <img src="../images/headshot-place-holder.png" alt="" class="bio-photos">
                     </div>
                     <h2 class="bio-names">Isaac Chilemu</h2>
                     <h3 class="bio-location">Livingstone, Zambia</h3>
@@ -190,7 +198,7 @@
 
                 <div class="about-us__bio-containers">
                     <div class="bio-photo-containers">
-                        <img src="" alt="" class="bio-photos">
+                        <img src="../images/headshot-place-holder.png" alt="" class="bio-photos">
                     </div>
                     <h2 class="bio-names">Julie Whitman</h2>
                     <h3 class="bio-location">Lincoln, Nebraska</h3>
@@ -203,7 +211,7 @@
 
                 <div class="about-us__bio-containers">
                     <div class="bio-photo-containers">
-                        <img src="" alt="" class="bio-photos">
+                        <img src="../images/headshot-place-holder.png" alt="" class="bio-photos">
                     </div>
                     <h2 class="bio-names">Lori Applegate</h2>
                     <h3 class="bio-location">Lincoln, Nebraska</h3>
@@ -218,19 +226,22 @@
             </div>
         </section>
 
-     <div class="footer">
-        <a class="" href="index.html">
-            <img class="" src="../images/rise-zambia-logo-mobile-two.jpeg"
-                 alt="Rise Literacy Zambia Logo Home Screen Link">
-        </a>
-        <p class="footer__text">Phone: 1-234-567-8900</p>
-        <p class="footer__text">Riseliteracy.zambia@gmail.com</p>
-        <div>
-            <p class="footer__text">1234 NE Some Street</p>
-            <p class="footer__text">Somewhere, ST 123456</p>
-        </div>        
-        <p class="footer__text">Designed & Developed by nathanbrownweb.com</p>
-    </div>
+        <div class="footer">
+            <div class="footer__logo-contact-info-flex-wrapper">
+                <a class="" href="index.html">
+                    <img class="footer__logo-image" src="../images/rise-zambia-logo-mobile-two.jpeg"
+                         alt="Rise Literacy Zambia Logo Home Screen Link">
+                </a>
+                <div class="footer__contact-info-container">
+                    <p class="footer__text">Phone: 1-234-567-8900</p>
+                    <p class="footer__text">Riseliteracy.zambia@gmail.com</p>
+                    <div>
+                        <p class="footer__text">1234 NE Some Street <br> Somewhere, ST 123456</p>
+                    </div>
+                </div>
+            </div>      
+            <p class="footer__text developer-tag">Designed & Developed by nathanbrownweb.com</p>
+        </div>
     
     </main>
 

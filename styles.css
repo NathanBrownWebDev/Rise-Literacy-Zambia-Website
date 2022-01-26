@@ -112,7 +112,7 @@ N     N A     A    V        BBBBBB  A     A R     R
     display: flex;
     align-items: center;
     width: 1.8rem;
-   height: 100%;
+   height: 2rem;
    margin-right: 1em;
 }
 .nav-icon:hover, .nav-icon:focus {
@@ -195,7 +195,10 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     letter-spacing: .1rem;
     line-height: 1;
 }
-.donate-button:hover, .donate-button:focus, .header-donate-button:hover, .header-donate-button:focus {
+.donate-button:hover, 
+.donate-button:focus, 
+.header-donate-button:hover, 
+.header-donate-button:focus {
     cursor: pointer;
     background-color: transparent;
     border: solid 2px var(--clr-primary);
@@ -205,7 +208,7 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     text-decoration: underline ;
 }
 .header-donate-button {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 .nav__list__item__button {
     padding: .3em 1.4em;
@@ -214,7 +217,7 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     width: 8em;
     font-size: 1.4rem;
 }
-.nav-donate-button {
+.header-donate-button {
     border: 2px solid var(--clr-background-light);
 }
 .hero-donate-button {
@@ -558,6 +561,7 @@ h   h eeeee r   r  ooo
     height: 8em;
     margin-top: .5em;
     border:var(--clr-background-light) solid .1em;
+    padding: .1em;
 }
 
 /*----stay connected--------*/
@@ -686,6 +690,9 @@ A     A BBBBBB   OOOOO   UUUUU     T
     body {
         font-size: 18px;
     }
+    .nav__list {
+        inset: min(15vh, 5rem) 0 0 35vw;  
+    }
     /*-------hero-section-----------------------*/
     .hero-photos-grid-container {
         display: grid;
@@ -747,17 +754,12 @@ A     A BBBBBB   OOOOO   UUUUU     T
         width: 100%;
     }
     .footer__logo-contact-info-flex-wrapper {
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
         display:flex;
         justify-content: space-between;
         align-items: center;
         text-align: right;
-    }
-    .footer__logo-image{
-        margin-left: 2em;
-    } 
-    .footer__contact-info-container {
-        margin-right: 2em;
     }
     .footer__text {
         margin: .5em 0 .5em 0;
@@ -775,7 +777,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
 */
 @media only screen and (min-width: 850px) {
     body {
-        font-size: 19px;
+        font-size: 17px;
     }
     /*----hero section ------------------*/
     .hero-section {
@@ -850,20 +852,22 @@ A     A BBBBBB   OOOOO   UUUUU     T
 }
 /*
   0    000   000   000
-  0   0   0 0   0 0   0
+ 00   0   0 0   0 0   0
   0   0   0  000  0   0
   0   0   0 0   0 0   0
 00000  000   000   000
 */
 @media only screen and (min-width: 1080px) {
     body {
-        font-size: 20px;
+        font-size: 19px;
     }
     main {
-        top: min(10vh, 12em);
+        /* min-height: 3em; */
+        top: clamp(3em, 8vh, 10em);
     }
     .header {
-        height: min(10vh, 12em);
+        /* min-height: 3em; */
+        height: clamp(3em, 8vh, 10em);
     }
     .header__flex-wrapper {
         display: flex;
@@ -871,7 +875,6 @@ A     A BBBBBB   OOOOO   UUUUU     T
         gap: 0;
         align-items: center;
         width: 90%;
-    
     }
     .header-hide {
         transform: translateY(-100%);
@@ -885,14 +888,21 @@ A     A BBBBBB   OOOOO   UUUUU     T
         display: flex;
         align-items: center;
         height: 100%;
-        margin-left: 0;
+        margin-right: 10%;
+    }
+    .header-logo-link__image {
+        width: clamp(5.5em, 6.5vw, 13em);
+        height: auto;
     }
     .nav-icon {
         display: none;
     }
+    .nav {
+        width: 100%;
+    }
     .nav__list {
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         position: static;
         gap: 0;
@@ -901,7 +911,6 @@ A     A BBBBBB   OOOOO   UUUUU     T
         padding: 0;
         background: none;
         transform: none;
-        /* margin-right: 5%; */
     }
     @supports (backdrop-filter: blur(.2rem)) {
         .nav__list {
@@ -916,19 +925,26 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .nav__list__item__link {
         color: var(--clr-text-dark);
         padding: .5em;
-        font-size: min(1.4vw, 1.4rem);
+        font-size: clamp(.9rem, .8vw, 2.2rem);
         /* white-space: nowrap; */
     }
     .nav__about {
         margin-right: .75vw;
     }
-    .nav-donate-button-item {
+    .header-donate-button-item {
         order: 5;
+    }
+    .header-donate-button {
+        font-size: clamp(1.4rem, 1.4vw, 3.4rem);
+    }
+    .header-donate-button:hover, 
+    .header-donate-button:focus {
+        color:var(--clr-primary);
     }
     
     /* ------ hero section ------------------*/
     .hero-section {
-        min-height: 90vh;
+        min-height: 92vh;
         padding: 0;
     }
     .hero-headers-top {
@@ -956,12 +972,12 @@ A     A BBBBBB   OOOOO   UUUUU     T
     /*--------- section css-------------------*/
     .section__title {
         font-size: min(3vw, 10rem);
-        border-left: .3rem solid var(--clr-section-divider);
-        border-right: .3rem solid var(--clr-section-divider);
+        border-left: .15rem solid var(--clr-section-divider);
+        border-right: .15rem solid var(--clr-section-divider);
     }
     .commitment-section {
-        min-height: 100vh;
-        padding: 0;
+        min-height: 70vh;
+        padding: 15vh 0;
     }
     .commitment-title {
         margin-bottom: 3.5em;
@@ -980,9 +996,33 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .values-section__grid__text__paragraphs {
         max-width: none;
         width: 75%;
-        font-size: min(1vw, 3rem);
+        font-size: clamp(1rem, 1vw, 3rem);
     }
-    /*--- ABOUT US PAGE ONLY CSS --------------*/
+    .donate-contact-section {
+        padding: 15vh 0;
+    }
+    .stay-connected__logo-container {
+        max-width: none;
+        width: 20%;
+    }
+    .stay-connected__images {
+        width: clamp(4.5em, 5vw, 8em);
+        height: auto;
+    }
+    /*---- footer----------------------------*/
+    .footer__logo-image {
+        width: clamp(6.5em, 8.5vw, 18em);        
+        height: auto;
+    }
+    .footer__text {
+        font-size: clamp(.7rem, .8vw, 2rem);
+        padding: 0;
+        margin: 1em 0 1em 0;
+    }
+    .developer-tag {
+        margin:0;
+    }
+    /*--- ABOUT US PAGE ONLY CSS --------------------------------*/
     .about-us-main-container {
         background: linear-gradient(
         #107535be, #107535be ),  
@@ -992,8 +1032,18 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    .about-us__section-paragraph {
+        width: 95%;
+    }
 }
-@media only screen and (min-width: 1440px) {
+/*
+  0   0  0  0  0   000
+ 00   0  0  0  0  0   0
+  0   00000 00000 0   0
+  0      0     0  0   0
+00000    0     0   000
+*/
+@media only screen and (min-width: 1250px) {
     .commitment-section_grid-wrapper {
         max-width: none;
         width: 90%;
@@ -1013,7 +1063,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         display: inline-block;
         background-color: var(--clr-section-divider);
         width: min(6vw, 12em);
-        height: .2rem;
+        height: .15rem;
         margin-top: 3.5vw;
         /* align-self: center; */
     }
@@ -1050,10 +1100,10 @@ A     A BBBBBB   OOOOO   UUUUU     T
        
     }
     .commitment-containers__headers {
-        font-size: min(2.4vw, 8rem);
+        font-size: clamp(2.2rem, 2.4vw, 8rem);
     }
     .commitment-containers__text {
-        font-size: min(1vw, 3rem);
+        font-size: clamp(1rem, 1vw, 3rem);
     }
     /*----- donate-contact section-----------*/
     .donate-contact-section__paragraphs {
@@ -1068,7 +1118,48 @@ A     A BBBBBB   OOOOO   UUUUU     T
         max-width: none;
         width: 45%;
     }
+    .reach-out-container__content {
+        width: 80%;
+        max-width: none;
+    }
     .reach-out-paragraph {
         width: 90%;
+    }
+    .contact-form__small-print-paragraph {
+        font-size: clamp(.8rem, .8vw, 1.7rem);
+    }
+    .contact-form__input-label {
+        font-size: clamp(.9rem, .9vw, 1.9rem);
+    }
+    .contact-form__input {
+        height: clamp(2em, 1.8vw, 3em);
+        border-bottom:var(--clr-background-light) solid clamp(.1em, .2vw , .16em);
+        font-size: clamp(.9rem, .9vw, 1.9rem);
+    }
+    .contact-form__checkboxes {
+        height: clamp(15px, .8vw, 34px);
+        width: clamp(15px, .8vw, 34px);
+    }
+    .contact-form__textarea {
+        height: clamp(8em, 10vw, 28em);
+        border:var(--clr-background-light) solid clamp(.1em, .2vw , .16em);
+        font-size: clamp(.9rem, .9vw, 1.9rem);
+    }
+}
+/*
+ 000   000   000   000 
+0   0 0   0 0   0 0   0
+   0  0   0 0   0 0   0
+  0   0   0 0   0 0   0
+00000  000   000   000
+*/
+@media only screen and (min-width: 2000px) {
+    main {
+        /* min-height: 3em; */
+        top: clamp(4.8em, 8vh, 10em);
+    }
+    .header {
+        /* min-height: 3em; */
+        height: clamp(4.8em, 8vh, 10em);
     }
 }
