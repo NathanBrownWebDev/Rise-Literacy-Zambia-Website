@@ -463,6 +463,9 @@ h   h eeeee r   r  ooo
     line-height: .8;
     font-weight: 400;
 }
+.commitment-containers__text {
+    font-size: 1.05rem;
+}
 .commitment-divider-one, 
 .commitment-divider-two, 
 .commitment-divider-three {
@@ -519,6 +522,7 @@ h   h eeeee r   r  ooo
     width: 85%;
     max-width: 30em;
     margin-bottom: .8em;
+    font-size: 1.05rem;
 }
 /*
 0000   000  0   0   0   00000 00000
@@ -549,13 +553,15 @@ h   h eeeee r   r  ooo
     margin-bottom: .2em;
 }
 .donate-contact-section__paragraphs {
+    font-size: 1.05rem;
     width: 90%;
     max-width: 51.2rem;
     font-weight: 500;
 }
 .contact-form__small-print-paragraph {
     width: 90%;
-    font-size: .8rem;
+    font-size: .95rem;
+    font-weight: 300;
     margin-top: .75em;
 }
 .donate-container {
@@ -586,7 +592,7 @@ h   h eeeee r   r  ooo
 .contact-form__input-label {
     font-family: var(--font-section__title);
     font-weight: 500;
-    font-size: .9rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
 }
@@ -594,7 +600,7 @@ h   h eeeee r   r  ooo
     background-color: transparent;
     color:var(--clr-text-light);
     font-family: var(--font-paragraphs);
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 .form-icons {
@@ -1075,15 +1081,15 @@ A     A BBBBBB   OOOOO   UUUUU     T
         font-size: min(8vw, 18rem)
     }
     .hero-headers-bottom {
-        font-size: min(4.5vw, 12rem)
+        font-size: clamp(2.2rem, 3.8vw, 10rem)
     }
     .hero-divider { 
         max-width: none;
-        width: min(38vw, 300rem);
+        width: clamp(30rem, 34vw, 300rem);
     }
     .hero-mission-statement {
-        max-width: 44vw;
-        font-size: min(2.5vw, 9rem)
+        max-width: 42vw;
+        font-size: clamp(1.4rem, 2.2vw, 8rem)
     }
     .hero-donate-button, .donate-button {
         font-size: min(2.2vw, 8rem)
