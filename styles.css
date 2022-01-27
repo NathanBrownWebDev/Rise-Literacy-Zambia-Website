@@ -638,7 +638,9 @@ h   h eeeee r   r  ooo
 .form-submit-button-container {
     margin: 1.5em auto 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1em;
 }
 .hidden-form-input {
