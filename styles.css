@@ -612,6 +612,7 @@ h   h eeeee r   r  ooo
     width: 100%;
     height: 2em;
     border: hidden;
+    padding-left: .3em;
     border-bottom:var(--clr-background-light) solid .1em;
 }
 .contact-form__checkbox-container {
@@ -630,7 +631,7 @@ h   h eeeee r   r  ooo
     height: 8em;
     margin-top: .5em;
     border:var(--clr-background-light) solid .1em;
-    padding: .1em;
+    padding: .1em 0 0 .3em;
 }
 .spam-filter {
     margin: 0 50%;
@@ -641,7 +642,7 @@ h   h eeeee r   r  ooo
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 .hidden-form-input {
     display: none;
