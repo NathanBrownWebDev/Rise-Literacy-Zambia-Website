@@ -171,7 +171,20 @@
                         We welcome gently used books and also encourage digital drives via Amazon,
                         Scholastic Book Club or Usborne Books.
                     </p>
-                    <form class="contact-form" action="POST" data-netlify="true" method="post">
+                    <form 
+                        class="contact-form" 
+                        action="POST" 
+                        method="post" 
+                        data-netlify-recaptcha="true" 
+                        netlify-honeypot="bot-field" 
+                        data-netlify="true">
+                        
+                        <p class="hidden-form-input">
+                            <label>
+                              Don’t fill this out: <input name="bot-field" />
+                            </label>
+                          </p>
+
                         <div class="contact-form__input-label-containers">
                             <label for="contact-form-name" class="contact-form__input-label">
                                 <img src="../images/customer-icon.png" alt="" class="form-icons">
@@ -214,8 +227,8 @@
                             <label for="contact-form-questions" class="contact-form__input-label">Questions Or Comments</label>
                             <textarea name="Questions or Comments" id="contact-form-questions"  class="contact-form__textarea"></textarea>
                         </div>
-                        <div data-netlify-recaptcha="true" class="spam-filter"></div>
                         <div class="form-submit-button-container">
+                            <div data-netlify-recaptcha="true" class="spam-filter"></div>
                             <button type="submit" class="donate-button form-submit-button">SUBMIT</button>
                         </div>
                 </div>

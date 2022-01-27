@@ -639,6 +639,10 @@ h   h eeeee r   r  ooo
     margin: 1.5em auto 0 auto;
     display: flex;
     justify-content: center;
+    gap: 1em;
+}
+.hidden-form-input {
+    display: none;
 }
 
 /*----stay connected--------*/
