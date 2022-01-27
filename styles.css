@@ -633,7 +633,7 @@ h   h eeeee r   r  ooo
     padding: .1em;
 }
 .spam-filter {
-    margin: 0 auto;
+    margin: 0 50%;
 }
 .form-submit-button-container {
     margin: 1.5em auto 0 auto;
