@@ -632,6 +632,9 @@ h   h eeeee r   r  ooo
     border:var(--clr-background-light) solid .1em;
     padding: .1em;
 }
+.spam-filter {
+    margin: 0 auto;
+}
 .form-submit-button-container {
     margin: 1.5em auto 0 auto;
     display: flex;
