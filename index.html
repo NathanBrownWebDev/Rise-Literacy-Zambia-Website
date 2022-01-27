@@ -171,7 +171,7 @@
                         We welcome gently used books and also encourage digital drives via Amazon,
                         Scholastic Book Club or Usborne Books.
                     </p>
-                    <form class="contact-form" action="" method="post">
+                    <form class="contact-form" action="POST" data-netlify="true" method="post">
                         <div class="contact-form__input-label-containers">
                             <label for="contact-form-name" class="contact-form__input-label">
                                 <img src="../images/customer-icon.png" alt="" class="form-icons">
@@ -213,6 +213,10 @@
                         <div class="contact-form__input-label-containers">
                             <label for="contact-form-questions" class="contact-form__input-label">Questions Or Comments</label>
                             <textarea name="" id="contact-form-questions"  class="contact-form__textarea"></textarea>
+                        </div>
+                        <div data-netlify-recaptcha="true" class="spam-filter"></div>
+                        <div class="form-submit-button-container">
+                            <button type="submit" class="donate-button form-submit-button">SUBMIT</button>
                         </div>
                 </div>
                 </form>
