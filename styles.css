@@ -163,6 +163,7 @@ N     N A     A    V        BBBBBB  A     A R     R
     transform: scale(0,1);
     transform-origin: right;
     transition: transform .4s ease-in-out;
+    overflow: scroll;
 }
 @supports (backdrop-filter: blur(.2rem)) {
     .nav__list {

@@ -1,7 +1,3 @@
-//load top of webpage on reload
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// }
 //hide/show nav bar on scroll
 const navCheckbox = document.querySelector(".nav-checkbox");
 const navHeader = document.querySelector('.header');
@@ -34,3 +30,4 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+//---intersection observer-----------------
