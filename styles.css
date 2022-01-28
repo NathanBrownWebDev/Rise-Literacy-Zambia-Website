@@ -163,7 +163,7 @@ N     N A     A    V        BBBBBB  A     A R     R
     transform: scale(0,1);
     transform-origin: right;
     transition: transform .4s ease-in-out;
-    overflow: scroll;
+    overflow-y: auto;
 }
 @supports (backdrop-filter: blur(.2rem)) {
     .nav__list {
@@ -223,6 +223,7 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     font-family: var(--font-accent);
     letter-spacing: .1rem;
     line-height: 1;
+    -webkit-appearance: none ;
 }
 .donate-button:hover, 
 .donate-button:focus, 
