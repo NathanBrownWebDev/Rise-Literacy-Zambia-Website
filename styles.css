@@ -168,7 +168,6 @@ N     N A     A    V        BBBBBB  A     A R     R
     transform: scale(0,1);
     transform-origin: right;
     transition: transform .4s ease-in-out;
-    overflow-y: auto;
 }
 @supports (backdrop-filter: blur(.2rem)) {
     .nav__list {
@@ -678,7 +677,25 @@ h   h eeeee r   r  ooo
     width: 4.5em;
     height: auto;
 }
-
+/*
+ 00000  0000000  00000  000000  0     0
+0     0    0    0     0 0     0  0   0
+0          0    0     0 0     0   0 0
+  0000     0    0     0 000000     0
+      0    0    0     0 0   0      0
+0     0    0    0     0 0    0     0
+ 00000     0     00000  0     0    0
+*/
+.our-story-main-container {
+    background: linear-gradient(
+    #000000be, #000000be ),  
+    url('../images/about-us-background-mobile.jpg');
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1em 0 0 0;
+}
 /*
    A    BBBBBB   OOOOO  U     U TTTTTTT
   A A   B     B O     O U     U    T 
@@ -709,7 +726,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     font-family: var(--font-section__title);
     color:var(--clr-text-light);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: clamp(2.2rem, 2vw, 3.6rem);
     text-align: left;
     margin-top: 1em;
     padding: .8em 0 .8em .8em;
@@ -1081,7 +1098,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         color: var(--clr-primary);
         border-bottom: solid .15em var(--clr-primary);
     }
-    .nav__about {
+    .nav__our-team {
         margin-right: .75vw;
     }
     .header-donate-button-item {
