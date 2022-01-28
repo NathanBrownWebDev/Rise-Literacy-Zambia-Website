@@ -47,6 +47,11 @@ p {
 label {
     display: block;
 }
+input {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-appearance: none ;
+}
 main {
     width: 100%; /*alternative is 90%*/
     margin: 0 auto;
@@ -223,7 +228,6 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     font-family: var(--font-accent);
     letter-spacing: .1rem;
     line-height: 1;
-    -webkit-appearance: none ;
 }
 .donate-button:hover, 
 .donate-button:focus, 
@@ -236,6 +240,8 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     font-weight: 700;
     letter-spacing: .12rem;
     text-decoration: underline ;
+    -webkit-border-radius:0px;
+    -webkit-appearance: none ;
 }
 .header-donate-button {
     font-size: 1.7rem;
