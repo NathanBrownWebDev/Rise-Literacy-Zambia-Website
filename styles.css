@@ -50,7 +50,7 @@ label {
 input {
     -webkit-border-radius: 0px;
     border-radius: 0px;
-    -webkit-appearance: none ;
+    
 }
 main {
     width: 100%; /*alternative is 90%*/
