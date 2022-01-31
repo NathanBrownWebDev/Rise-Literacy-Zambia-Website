@@ -47,7 +47,7 @@ p {
 label {
     display: block;
 }
-input[type=submit], input[type=button]{
+input[type=submit], input[type=button], input[type=text]{
     -webkit-border-radius: 0px;
     border-radius: 0px;
     -webkit-appearance: none ;
@@ -392,7 +392,7 @@ h   h eeeee r   r  ooo
     font-size: 1.4rem;
     max-width: 28rem;
 }
-.hero-photos-grid-container {
+.hero-grid-photos-container {
     width: 90%;
     margin: 0 auto;
     max-width: 38rem;
@@ -802,7 +802,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         inset: min(15vh, 5rem) 0 0 35vw;  
     }
     /*-------hero-section-----------------------*/
-    .hero-photos-grid-container {
+    .hero-grid-photos-container {
         display: grid;
         row-gap: 1em;
         column-gap: 1em;
@@ -954,7 +954,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         margin-left: 5%;
         max-width: none;
     }
-    .hero-photos-grid-container {
+    .hero-grid-photos-container {
         margin-right: 5%;
     }
     /*------commitment section ------------*/
@@ -1133,7 +1133,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .hero-donate-button, .donate-button {
         font-size: min(2.2vw, 8rem)
     }
-    .hero-photos-grid-container {
+    .hero-grid-photos-container {
         max-width: none;
         width: min(70vw, 120em);
         gap: 1vw;
