@@ -47,7 +47,11 @@ p {
 label {
     display: block;
 }
-input[type=submit], input[type=button], input[type=text]{
+input[type=submit], 
+input[type=button], 
+input[type=text], 
+input[type=email], 
+textarea {
     -webkit-border-radius: 0px;
     border-radius: 0px;
     -webkit-appearance: none ;
@@ -506,20 +510,20 @@ h   h eeeee r   r  ooo
     height: 100%;
     object-fit: cover;
 }
-.values-image-one {   
+.values-image-one-container {   
     grid-area: image-one;
 }
-.values-image-two {
+.values-image-two-container {
     grid-area: image-two;
 }
 .values-section__grid__text {
     margin-bottom: 2em;
     grid-area: values-text;
 }
-.values-image-three {
+.values-image-three-container {
     grid-area: image-three;
 }
-.values-image-four {
+.values-image-four-container {
     grid-area: image-four;
 }
 .values-title {
@@ -642,6 +646,7 @@ h   h eeeee r   r  ooo
 }
 .spam-filter {
     margin: 0 50%;
+    -webkit-margin-bottom: 1em;
 }
 .form-submit-button-container {
     margin: 1.5em auto 0 auto;
