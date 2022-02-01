@@ -1208,6 +1208,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .nav__list__item {
         opacity: 1;
         transition: none ;
+        margin-bottom: 0;
     }
     .nav__list__item__link {
         color: var(--clr-text-dark);
