@@ -94,7 +94,7 @@ N     N A     A    V        BBBBBB  A     A R     R
     /* justify-content: space-between; */
     /* gap: 1.7rem; */
     align-items: center;
-    z-index: 2;
+    z-index: 9999;
     top: 0;
     left: 0;
 }
@@ -693,13 +693,82 @@ h   h eeeee r   r  ooo
 */
 .our-story-main-container {
     background: linear-gradient(
-    #000000be, #000000be ),  
-    url('../images/about-us-background-mobile.jpg');
+    #000000be, #000000e7 ),  
+    url('../images/zambia-hut-mobile-450.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 1em 0 0 0;
+    padding: 0 0 0 0;
+    min-height: 100vh;
+    top: 0;
+}
+.our-story-text-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(20rem, 45vh, 1rem );
+    position: fixed;
+    z-index: 1;
+    padding-top: clamp(1rem, 8vh, 7rem);
+}
+.text-background {
+    font-size: clamp(3rem, 38vw, 27rem);
+    opacity: 40%;
+    color: var(--clr-text-dark);
+    font-family:var(--font-section__title);
+    font-weight: 600;
+}
+.z-index-top {
+    position: relative;
+    z-index: 10;
+}
+.our-story-section {
+    padding-top: min(15vh, 7rem);
+}
+.our-story__section-content {
+    background-color: #10753583;
+    border-radius: 0 0 .75em .75em;
+    padding: 1em 1em;
+}
+.our-story__section-header {
+    font-family: var(--font-section__title);
+    color:var(--clr-text-light);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 2vw, 3.6rem);
+    text-align: left;
+    margin-top: 1em;
+    padding: .8em 0 .8em .8em;
+    border: solid #10753583 2px;
+    border-radius: .75em .75em 0 0;
+}
+.our-story__section-content p {
+    color:var(--clr-text-light);
+}
+.our-story-content-photos {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.our-story-content__photos-top-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin: 1em auto;
+}
+.photo-three {
+    display: none;
+}
+.our-story-content__photos-bottom-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em 0 .5em 0;
+    /* gap: 5%; */
 }
 /*
    A    BBBBBB   OOOOO  U     U TTTTTTT
@@ -936,6 +1005,41 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .developer-tag {
         margin: .4em auto 0 auto;
     }
+    /*
+    ------our-story------------------------------------------------
+    ------our-story------------------------------------------------
+    */
+    .our-story-main-container {
+        background: linear-gradient(
+            #000000be, #000000e7 ),  
+            url('../images/zambia-hut-1080.jpg');
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+    }
+    .our-story-content__photos-top-container {
+        max-width: 48em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "     .       OS-photo-two      ."
+            "OS-photo-one OS-photo-two OS-photo-three"
+            "OS-photo-one OS-photo-two OS-photo-three"
+            "OS-photo-one       .      OS-photo-three";  
+        column-gap: 5%;
+    }
+    .photo-one {
+        grid-area: OS-photo-one;
+    }
+    .photo-two {
+        grid-area: OS-photo-two;
+    }
+    .photo-three {
+        display: inline-block;
+        grid-area: OS-photo-three;
+    }
 }
 /*
  000  00000  000 
@@ -1034,6 +1138,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         /* min-height: 3em; */
         top: clamp(3em, 8vh, 10em);
     }
+    /*------HEADER------------------------*/
     .header {
         /* min-height: 3em; */
         height: clamp(3em, 8vh, 10em);
@@ -1193,7 +1298,22 @@ A     A BBBBBB   OOOOO   UUUUU     T
         padding: 0;
         margin: 1em 0 1em 0;
     }
-   
+    /*-------OUR STORY---------------------------*/
+    .our-story-main-container {
+        background: linear-gradient(
+            #000000be, #000000e7 ),  
+            url('../images/zambia-hut-desktop-original.jpg');
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+    }
+    .text-background {
+        padding-top: clamp(3rem, 12vh, 7rem);
+    }
+    .our-story__section-content p {
+        font-size: 1rem;
+    }
     /*--- ABOUT US PAGE ONLY CSS --------------------------------*/
     .about-us-main-container {
         background: linear-gradient(
