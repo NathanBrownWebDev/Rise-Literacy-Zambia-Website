@@ -783,15 +783,18 @@ A     A B     B O     O U     U    T
 A     A B     B O     O U     U    T
 A     A BBBBBB   OOOOO   UUUUU     T 
 */
-
-.about-us-main-container {
+.our-team-fixed-background {
     background: linear-gradient(
     #107535be, #107535be ),  
     url('../images/about-us-background-mobile.jpg');
-    background-position: center center;
+    background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+.about-us-main-container {
     padding: 1em 0 0 0;
 }
 .about-us__section-containers {  
@@ -1309,12 +1312,6 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background: linear-gradient(
         #000000be, #000000e7 ),  
         url('../images/zambia-hut-desktop-original.jpg');
-        background-position: center;
-        background-size:cover;
-        background-repeat: no-repeat;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
     }
     .text-background {
         padding-top: clamp(3rem, 12vh, 7rem);
@@ -1322,15 +1319,11 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .our-story__section-content p {
         font-size: 1rem;
     }
-    /*--- ABOUT US PAGE ONLY CSS --------------------------------*/
-    .about-us-main-container {
+    /*--- OUR TEAM PAGE --------------------------------*/
+    .our-team-fixed-background {
         background: linear-gradient(
         #107535be, #107535be ),  
         url('../images/tree-background-bw.jpg');
-        background-position: center center;
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
     .about-us__section-paragraph {
         width: 95%;
