@@ -165,7 +165,9 @@ N     N A     A    V        BBBBBB  A     A R     R
     flex-direction: column;
     gap: min(15vh, 3rem);
     height: 90vh;
-    inset: min(15vh, 5rem) 0 0 20%;
+    top: min(15vh, 5rem);
+    right: 0;
+    width: 60%;
     position: absolute;
     padding: min(10vh, 3rem) 2rem;
     background: #107535fa;
@@ -880,7 +882,9 @@ A     A BBBBBB   OOOOO   UUUUU     T
         font-size: 18px;
     }
     .nav__list {
-        inset: min(15vh, 5rem) 0 0 35vw;  
+        top: min(15vh, 5rem);
+        right: 0; 
+        width: 40%; 
     }
     /*-------hero-section-----------------------*/
     .hero-grid-photos-container {
@@ -1189,7 +1193,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         align-items: center;
         position: static;
         gap: 0;
-        inset: 0;
+        width: 100%;
         height: auto;
         padding: 0;
         background: none;
@@ -1215,9 +1219,6 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .nav__list__item__link:focus {
         color: var(--clr-primary);
         border-bottom: solid .15em var(--clr-primary);
-    }
-    .nav__our-team {
-        margin-right: .75vw;
     }
     .header-donate-button-item {
         order: 5;
