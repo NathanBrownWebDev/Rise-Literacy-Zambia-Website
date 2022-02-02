@@ -506,26 +506,29 @@ h   h eeeee r   r  ooo
         'values-text values-text'
         'image-three image-four';
 }
+.values-image-container {
+    width:100%;
+    height: 100%;
+}
 .values-images {
     width: 100%;
-    
     height: 100%;
     object-fit: cover;
 }
-.values-image-one-container {   
+.VI-one {   
     grid-area: image-one;
 }
-.values-image-two-container {
+.VI-two {
     grid-area: image-two;
 }
 .values-section__grid__text {
     margin-bottom: 2em;
     grid-area: values-text;
 }
-.values-image-three-container {
+.VI-three {
     grid-area: image-three;
 }
-.values-image-four-container {
+.VI-four {
     grid-area: image-four;
 }
 .values-title {
@@ -861,6 +864,70 @@ A     A BBBBBB   OOOOO   UUUUU     T
 
 }
 /*
+ 0000 0   0  0000  0000 00000  0000  0000
+0     0   0 0     0     0     0     0   
+ 000  0   0 0     0     0000   000   000
+    0 0   0 0     0     0         0     0
+0000   000   0000  0000 00000 0000  0000
+*/
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.thank-you-content {
+    position: relative;
+    z-index: 10;
+    background-color: #107535d0;
+    width: min(90%, 25em);
+    padding: 3em 0;
+    color:var(--clr-text-light);
+    border-radius: 1em;
+}
+.thank-you-content h3, .thank-you-content p  {
+    margin-bottom: .75em;
+}
+.thank-you-content input {
+    font-family: var(--font-section__title);
+    font-size: 1.2rem;
+    color:var(--clr-text-light);
+    background-color: transparent;
+    border: none;
+    border-bottom: solid var(--clr-background-light) .15em;
+}
+.thank-you-input-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.back-arrow {
+    background-color: var(--clr-background-light);
+    width: 1.7em;
+    height: .12em;
+    margin-right: .5em;
+    position: relative;
+}
+.back-arrow::before, .back-arrow::after {
+    content: '';
+    background-color: var(--clr-background-light);
+    position:absolute;
+    height: 100%;
+    width: 50%;
+}
+.back-arrow::before {
+    left: -.14em;
+    top: -.26em;
+    transform: rotate(-45deg);
+}
+.back-arrow::after {
+    left: -.14em;
+    bottom: -.26em;
+    transform: rotate(45deg);
+}
+/*
 0     0 0000000 000000  0000000    0       00000 
 00   00 0       0     0    0      0 0     0     0
 0 0 0 0 0       0     0    0     0   0    0     0
@@ -1024,12 +1091,9 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background: linear-gradient(
         #000000be, #000000e7 ),  
         url('../images/zambia-hut-1080.jpg');
-        /* background-position: center;
+        background-position: center;
         background-size:cover;
         background-repeat: no-repeat;
-        position: fixed;
-        width: 100vw;
-        height: 100vh; */
     }
     .our-story-content__photos-top-container {
         max-width: 48em;
@@ -1086,15 +1150,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     /*------values section ----------------*/
     
     .values-section__grid {
-        grid-template-rows: 1fr 1fr; /*adjust at wider media queries*/
-        max-height: 48em;
-        grid-template-rows : repeat(4, .6fr);
-        row-gap: 0;
-        grid-template-areas: 
-        'values-text image-one'
-        'values-text image-two'
-        'values-text image-three'
-        'values-text image-four';
+        grid-template-rows:17em auto 17em;
     }
     .values-title {
         margin-top: 2em;
@@ -1314,6 +1370,9 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background: linear-gradient(
         #000000be, #000000e7 ),  
         url('../images/zambia-hut-desktop-original.jpg');
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
     }
     .text-background {
         padding-top: clamp(3rem, 12vh, 7rem);
