@@ -32,6 +32,7 @@ html, body {
     padding: 0;
     background-color: var(--clr-background-light);
     font-family: var(--font-paragraphs);
+    font-weight: 300;
     font-size: 16px;
     /* overflow-x: hidden; */
 }
@@ -233,6 +234,7 @@ BBBBBBB     UUUUU        T         T       OOOOOOO   N     N
     font-family: var(--font-accent);
     letter-spacing: .1rem;
     line-height: 1;
+    font-weight: 400;
 }
 .donate-button:hover, 
 .donate-button:focus, 
