@@ -73,7 +73,10 @@ main {
         opacity: 100%;
     }
 }
-
+[data-src] {
+    min-width: 100px;
+    min-height: 100px;
+}
 
 /*
 N     N    A    V     V     BBBBBB     A    RRRRRR

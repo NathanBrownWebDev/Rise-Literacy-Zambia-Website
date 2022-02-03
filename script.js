@@ -1,4 +1,3 @@
-//hide/show nav bar on scroll
 const navCheckbox = document.querySelector(".nav-checkbox");
 const navHeader = document.querySelector('.header');
 
@@ -29,5 +28,47 @@ window.onscroll = function() {
     navCheckbox.checked = false; 
   }
   prevScrollpos = currentScrollPos;
-}
+};
 //---intersection observer-----------------
+const images = document.querySelectorAll('.lazy-load');
+
+
+function preloadImage(image) {
+  const dataSource = image.getAttribute('data-src');
+  const sourceSet = image.getAttribute('srcset');
+  const dataSourceSet = image.getAttribute('data-srcset');
+  if(!dataSource && !sourceSet) {
+    return;
+  } else if (dataSource) {
+    image.src = dataSource;
+    console.log(image.src);
+  } else if (sourceSet) {
+    image.srcset = dataSourceSet;
+    console.log(image.srcset);
+  }
+ 
+};
+
+const imageOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px 600px 0px"
+};
+
+const imageObserver = new IntersectionObserver((entries, imageObserver) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      preloadImage(entry.target);
+      imageObserver.unobserve(entry.target);
+    }
+  })
+}, imageOptions);
+
+images.forEach((image) => {
+  imageObserver.observe(image);
+})
+
+// srcsetImages.forEach((srcImage) => {
+//   imageObserver.observe(srcImage);
+// })
