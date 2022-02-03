@@ -15,7 +15,7 @@ navListsItemLinks.forEach(link => {
 //hide or show nav bar based on window scroll
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos || window.pageYOffset <= 5) {
+  if (prevScrollpos > currentScrollPos || window.pageYOffset <= 75) {
     navHeader.classList.add("header-show");
     navHeader.classList.remove("header-hide");
 //   } else if (for (let link of navListsItemLinks) {link.clicked == true})  {

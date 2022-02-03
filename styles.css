@@ -326,7 +326,7 @@ h   h eeeee r   r  ooo
     background: linear-gradient(
             rgba(0,0,0, 0.9),
             rgba(0,0,0, 0.9)  
-        ), url('../images/hero-container-photo-mobile.jpg');
+        ), url('../images/hero-container-photo-mobile-small.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -442,7 +442,7 @@ h   h eeeee r   r  ooo
     background-color: var(--clr-primary);
     background: linear-gradient(
         #107535da, #107535da ),  
-        url('../images/commitments-background-mobile.jpg');
+        url('../images/commitments-background-mobile-small.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat; 
@@ -554,7 +554,7 @@ h   h eeeee r   r  ooo
     background: linear-gradient(
             rgba(0,0,0, 0.85),
             rgba(0,0,0, 0.85)  
-        ), url('../images/team-work-hands-mobile.jpg');
+        ), url('../images/team-work-hands-mobile-small.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -708,9 +708,8 @@ h   h eeeee r   r  ooo
     height: 100vh;
 }
 .our-story-main-container {
-    padding: 0;
-    min-height: 100vh;
-    top: 0;
+    padding: 1em 0 0 0;
+    min-height: 100vh; 
 }
 .our-story-text-background {
     display: flex;
@@ -733,9 +732,9 @@ h   h eeeee r   r  ooo
     position: relative;
     z-index: 10;
 }
-.our-story-section {
+/* .our-story-section {
     padding-top: min(15vh, 7rem);
-}
+} */
 .our-story__section-content {
     background-color: #10753583;
     border-radius: 0 0 .75em .75em;
@@ -791,7 +790,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
 .our-team-fixed-background {
     background: linear-gradient(
     #107535be, #107535be ),  
-    url('../images/about-us-background-mobile.jpg');
+    url('../images/about-us-background-mobile-small.jpg');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -1090,7 +1089,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .our-story-fixed-background {
         background: linear-gradient(
         #000000be, #000000e7 ),  
-        url('../images/zambia-hut-1080.jpg');
+        url('../images/zambia-hut-1080-small.jpg');
         background-position: center;
         background-size:cover;
         background-repeat: no-repeat;
@@ -1145,13 +1144,24 @@ A     A BBBBBB   OOOOO   UUUUU     T
     }
     /*------commitment section ------------*/
     .commitment-section {
-        min-height: 80vh;
+        min-height: 50vh;
     }
     /*------values section ----------------*/
-    
     .values-section__grid {
-        grid-template-rows:17em auto 17em;
+        max-height: none;
+       grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows : repeat(4, .6fr);
+        row-gap: 0;
+        grid-template-areas: 
+        'values-text image-one image-two'
+        'values-text image-one image-two'
+        'values-text image-three image-four'
+        'values-text image-three image-four';
     }
+ 
+    /* .values-section__grid {
+        grid-template-rows:17em auto 17em;
+    } */
     .values-title {
         margin-top: 2em;
     }
@@ -1169,7 +1179,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background: linear-gradient(
             rgba(0,0,0, 0.9),
             rgba(0,0,0, 0.9)  
-        ), url('../images/hero-photo-resized.jpg');
+        ), url('../images/hero-photo-resized-1440.jpg');
         background-position: top right;
         background-repeat: no-repeat;
         background-size:cover;
@@ -1177,7 +1187,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .commitment-section {
         background: linear-gradient(
         #107535da, #107535da ),  
-        url('../images/commitments-background.jpg');
+        url('../images/commitments-background-1440.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat; 
@@ -1186,7 +1196,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background: linear-gradient(
             rgba(0,0,0, 0.85),
             rgba(0,0,0, 0.85)  
-        ), url('../images/team-work-hands-BW.jpg');
+        ), url('../images/team-work-hands-BW-1440.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -1328,7 +1338,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     .commitment-title {
         margin-bottom: 3.5em;
     }
-    .values-section__grid {
+    /* .values-section__grid {
         max-height: none;
        grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows : repeat(4, .6fr);
@@ -1338,12 +1348,13 @@ A     A BBBBBB   OOOOO   UUUUU     T
         'values-text image-one image-two'
         'values-text image-three image-four'
         'values-text image-three image-four';
-    }
+    } */
     .values-section__grid__text__paragraphs {
         max-width: none;
         width: 75%;
         font-size: clamp(1rem, 1vw, 3rem);
     }
+    /*-----DONATE SECTION------------------*/
     .donate-contact-section {
         padding: 15vh 0;
     }
@@ -1390,13 +1401,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         width: 95%;
     }
 }
-/*
-  0   0  0  0  0   000
- 00   0  0  0  0  0   0
-  0   00000 00000 0   0
-  0      0     0  0   0
-00000    0     0   000
-*/
+
 @media only screen and (min-width: 1220px) {
     .commitment-section_grid-wrapper {
         max-width: none;
@@ -1498,6 +1503,41 @@ A     A BBBBBB   OOOOO   UUUUU     T
         height: clamp(8em, 10vw, 28em);
         border:var(--clr-background-light) solid clamp(.1em, .2vw , .16em);
         font-size: clamp(.9rem, .9vw, 1.9rem);
+    }
+}
+/*
+  0   0  0  0  0   000
+ 00   0  0  0  0  0   0
+  0   00000 00000 0   0
+  0      0     0  0   0
+00000    0     0   000
+*/
+@media only screen and (min-width: 1441px) {
+    .hero-section {
+        background: linear-gradient(
+            rgba(0,0,0, 0.9),
+            rgba(0,0,0, 0.9)  
+        ), url('../images/hero-photo-resized.jpg');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .commitment-section {
+        background: linear-gradient(
+        #107535da, #107535da ),  
+        url('../images/commitments-background.jpg');
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat; 
+    }
+    .donate-contact-section {
+        background: linear-gradient(
+            rgba(0,0,0, 0.85),
+            rgba(0,0,0, 0.85)  
+        ), url('../images/team-work-hands-BW.jpg');
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
     }
 }
 /*
