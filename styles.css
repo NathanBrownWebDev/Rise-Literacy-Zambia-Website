@@ -649,10 +649,10 @@ h   h eeeee r   r  ooo
     border:var(--clr-background-light) solid .1em;
     padding: .1em 0 0 .3em;
 }
-.spam-filter {
+/* .spam-filter {
     margin: 0 50%;
     -webkit-margin-bottom: 1em;
-}
+} */
 .form-submit-button-container {
     margin: 1.5em auto 0 auto;
     display: flex;
