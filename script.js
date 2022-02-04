@@ -18,11 +18,6 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos || window.pageYOffset <= 75) { //75px is height of nav bar, so white background doesn't show
     navHeader.classList.add("header-show");
     navHeader.classList.remove("header-hide");
-//   } else if (for (let link of navListsItemLinks) {link.clicked == true})  {
-//     navHeader.classList.add("header-hide");
-//     navHeader.classList.remove("header-show");
-//     navCheckbox.checked = false;
-//     console.log(link);
   } else {
     navHeader.classList.add("header-hide");
     navHeader.classList.remove("header-show");
@@ -32,38 +27,54 @@ window.onscroll = function() {
 };
 
 //---intersection observer-----------------
-  //lazy load images
-const images = document.querySelectorAll('.lazy-load');
+ 
 
-function preloadImage(image) {
-  const dataSource = image.getAttribute('data-src');
-  const sourceSet = image.getAttribute('srcset');
-  const dataSourceSet = image.getAttribute('data-srcset');
-  if(!dataSource && !sourceSet) {
-    return;
-  } else if (dataSource) {
-    image.src = dataSource;
-  } else if (sourceSet) {
-    image.srcset = dataSourceSet;
-  }
-};
+  //change loading options based on window width
+if (window.innerWidth < 550) {
+  var imageOptions = {
+    rootMargin: "600px 0px 600px 0px"
+  };
+} else if (window.innerWidth >= 550 && window.innerWidth <= 1440) {
+    var imageOptions = {
+      rootMargin: "1100px 0px 1100px 0px"
+    };
+} else {
+    var imageOptions = {
+      rootMargin: "1400px 0px 1400px 0px"
+    };
+} 
 
-const imageOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px 600px 0px"
-};
+  //lazy load observed classes
+const observedElements = document.querySelectorAll('.observed');
+  
+  //callback function for intersection observer
+const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+    
+        if (!entry.isIntersecting) { 
+            return;
+        }
+        if (entry.target.dataset.src) {
+            entry.target.src = entry.target.dataset.src;
+            observer.unobserve(entry.target);
+        }
+        if (entry.target.getAttribute('srcset')) {
+            entry.target.srcset = entry.target.dataset.srcset;
+            observer.unobserve(entry.target);
+        }
+        if (entry.target.classList.contains('commitment-section')) {
+            entry.target.classList.add('commitment-background');
+            observer.unobserve(entry.target);
+        }
+        if (entry.target.classList.contains('donate-contact-section')) {
+            entry.target.classList.add('donate-contact-background');
+            observer.unobserve(entry.target);
+        }
+    })
+}
 
-const imageObserver = new IntersectionObserver((entries, imageObserver) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      preloadImage(entry.target);
-      imageObserver.unobserve(entry.target);
-    }
-  })
-}, imageOptions);
+let observer = new IntersectionObserver(callback, imageOptions);
 
-images.forEach((image) => {
-  imageObserver.observe(image);
-})
+observedElements.forEach((item) => {
+    observer.observe(item);
+})  

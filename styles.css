@@ -73,10 +73,10 @@ main {
         opacity: 100%;
     }
 }
-[data-src] {
+/* [data-src] {
     min-width: 100px;
     min-height: 100px;
-}
+} */
 
 /*
 N     N    A    V     V     BBBBBB     A    RRRRRR
@@ -445,15 +445,17 @@ h   h eeeee r   r  ooo
 */
 .commitment-section {
     background-color: var(--clr-primary);
+    color:var(--clr-text-light);
+    padding: 4rem 0;
+    min-height: 60vh;
+}
+.commitment-background {
     background: linear-gradient(
         #107535da, #107535da ),  
         url('../images/commitments-background-mobile-small.jpg');
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat; 
-    color:var(--clr-text-light);
-    padding: 4rem 0;
-    min-height: 60vh;
 }
 .commitment-section_grid-wrapper {
     display: flex;
@@ -516,6 +518,8 @@ h   h eeeee r   r  ooo
     height: 100%;
 }
 .values-images {
+    min-width: 100px;
+    min-height: 100px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -555,7 +559,10 @@ h   h eeeee r   r  ooo
 .donate-contact-section {
     width: 100%;
     padding: 4rem 0;
+    color: var(--clr-text-light);
     background-color: var(--clr-background-dark);
+}
+.donate-contact-background {
     background: linear-gradient(
             rgba(0,0,0, 0.85),
             rgba(0,0,0, 0.85)  
@@ -563,7 +570,6 @@ h   h eeeee r   r  ooo
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
-    color: var(--clr-text-light);
 }
 .donate-contact-section__headers {
     font-family: var(--font-accent);
@@ -1188,7 +1194,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background-repeat: no-repeat;
         background-size:cover;
     }
-    .commitment-section {
+    .commitment-background {
         background: linear-gradient(
         #107535da, #107535da ),  
         url('../images/commitments-background-1440.jpg');
@@ -1196,7 +1202,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     background-size:cover;
     background-repeat: no-repeat; 
     }
-    .donate-contact-section {
+    .donate-contact-background {
         background: linear-gradient(
             rgba(0,0,0, 0.85),
             rgba(0,0,0, 0.85)  
@@ -1526,7 +1532,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background-repeat: no-repeat;
         background-size:cover;
     }
-    .commitment-section {
+    .commitment-background {
         background: linear-gradient(
         #107535da, #107535da ),  
         url('../images/commitments-background.jpg');
@@ -1534,7 +1540,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
     background-size:cover;
     background-repeat: no-repeat; 
     }
-    .donate-contact-section {
+    .donate-contact-background {
         background: linear-gradient(
             rgba(0,0,0, 0.85),
             rgba(0,0,0, 0.85)  
