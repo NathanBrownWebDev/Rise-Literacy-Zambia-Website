@@ -894,7 +894,6 @@ A     A BBBBBB   OOOOO   UUUUU     T
     margin-bottom: .75em;
 }
 .thank-you-content input {
-    font-family: var(--font-section__title);
     font-size: 1.2rem;
     color:var(--clr-text-light);
     background-color: transparent;

@@ -1,9 +1,7 @@
 const navCheckbox = document.querySelector(".nav-checkbox");
 const navHeader = document.querySelector('.header');
 
-let prevScrollpos = window.pageYOffset;
-
-//close nav menu after click on link
+//close nav__list after click on link
 function closeMenu(){
     navCheckbox.checked = false; 
 }
@@ -11,10 +9,13 @@ const navListsItemLinks = document.querySelectorAll(".nav__list__item__link");
 navListsItemLinks.forEach(link => {
     link.addEventListener("click", closeMenu);
 })
+
 //hide or show nav bar based on window scroll
+let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos || window.pageYOffset <= 75) {
+  if (prevScrollpos > currentScrollPos || window.pageYOffset <= 75) { //75px is height of nav bar, so white background doesn't show
     navHeader.classList.add("header-show");
     navHeader.classList.remove("header-hide");
 //   } else if (for (let link of navListsItemLinks) {link.clicked == true})  {
@@ -29,9 +30,10 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
-//---intersection observer-----------------
-const images = document.querySelectorAll('.lazy-load');
 
+//---intersection observer-----------------
+  //lazy load images
+const images = document.querySelectorAll('.lazy-load');
 
 function preloadImage(image) {
   const dataSource = image.getAttribute('data-src');
@@ -41,12 +43,9 @@ function preloadImage(image) {
     return;
   } else if (dataSource) {
     image.src = dataSource;
-    console.log(image.src);
   } else if (sourceSet) {
     image.srcset = dataSourceSet;
-    console.log(image.srcset);
   }
- 
 };
 
 const imageOptions = {
@@ -68,7 +67,3 @@ const imageObserver = new IntersectionObserver((entries, imageObserver) => {
 images.forEach((image) => {
   imageObserver.observe(image);
 })
-
-// srcsetImages.forEach((srcImage) => {
-//   imageObserver.observe(srcImage);
-// })
