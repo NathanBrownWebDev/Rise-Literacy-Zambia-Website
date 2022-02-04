@@ -1,3 +1,50 @@
+ /* montserrat-regular - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  } 
+  /* montserrat-600 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/montserrat-v23-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v23-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* mohave-regular - latin */
+@font-face {
+    font-family: 'Mohave';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/mohave-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/mohave-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* poppins-300 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/poppins-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v19-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* poppins-500 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/poppins-v19-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v19-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
 /* ------------ CSS VARIABLES ----------------- */
 :root {
     --clr-text-dark: #000000;
@@ -32,7 +79,7 @@ html, body {
     padding: 0;
     background-color: var(--clr-background-light);
     font-family: var(--font-paragraphs);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     /* overflow-x: hidden; */
 }
@@ -350,10 +397,11 @@ h   h eeeee r   r  ooo
     margin: 0 auto;
 }
 .hero-headers-top {
-    font-size: 5rem;
-    font-weight: 600;
-    font-family: var(--font-section__title);
-    margin-left: -0.07em;
+    font-size: 5.5rem;
+    font-weight: 900;
+    font-family: var(--font-hero-accent);
+    letter-spacing: .3rem;
+    margin-left: -0.05em;
     line-height: .9;
     animation: sharpen-and-squish 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) .25s both;
 }
@@ -398,7 +446,7 @@ h   h eeeee r   r  ooo
 }
 .hero-mission-statement {
     margin-bottom: .25em;
-    font-weight: 300;
+    font-weight: 400;
     font-family: var(--font-section__title);
     font-size: 1.4rem;
     max-width: 28rem;
@@ -618,7 +666,7 @@ h   h eeeee r   r  ooo
 }
 .contact-form__input-label {
     font-family: var(--font-section__title);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -963,6 +1011,15 @@ A     A BBBBBB   OOOOO   UUUUU     T
         width: 40%; 
     }
     /*-------hero-section-----------------------*/
+    .hero-section {
+        background: linear-gradient(
+            rgba(0,0,0, 0.9),
+            rgba(0,0,0, 0.9)  
+            ), url('../images/hero-container-photo-mobile-small.jpg');
+        background-position: center center;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
     .hero-grid-photos-container {
         display: grid;
         row-gap: 1em;
