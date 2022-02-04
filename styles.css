@@ -641,8 +641,8 @@ h   h eeeee r   r  ooo
     align-items: center;
 }
 .contact-form__checkboxes {
-    /* background-color: transparent;
-    border:var(--clr-background-light) solid .1em; */
+    min-width: 1.2em;
+    max-width: 1.2em;
     margin-right: .75em;
 
 }
