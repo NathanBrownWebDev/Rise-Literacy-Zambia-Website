@@ -456,6 +456,10 @@ h   h eeeee r   r  ooo
     margin: 0 auto;
     max-width: 38rem;
 }
+.hero-grid__photo-container {
+    width: 100%;
+    height: 100%;
+}
 .hero-photos {
     object-fit: cover;
     width: 100%;
