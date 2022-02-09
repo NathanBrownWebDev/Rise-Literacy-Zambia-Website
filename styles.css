@@ -766,6 +766,8 @@ h   h eeeee r   r  ooo
     color: var(--clr-text-light);
     font-family:var(--font-section__title);
     font-weight: 600;
+    padding-top: clamp(5rem, 15vh, 15rem);
+
 }
 @keyframes opacity {
     0% {
@@ -1420,7 +1422,7 @@ A     A BBBBBB   OOOOO   UUUUU     T
         background-repeat: no-repeat;
     }
     .text-background {
-        padding-top: clamp(3rem, 12vh, 7rem);
+        padding-top: clamp(13rem, 20vh, 18rem);
     }
     .our-story__section-content p {
         font-size: 1rem;
